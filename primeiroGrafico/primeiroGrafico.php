@@ -8,15 +8,24 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart(){
     var data = google.visualization.arrayToDataTable([
-        ['Ano', 'Vendas', 'Gastos'],
-        [2004,  1000, 700],
-        [2005,  1170, 600],
-        [2006,  300,  1120],
-        [2007,  900,  540]
+        ['Cidade', 'População', { role: 'annotation' }],
+        <?php 
+
+        include 'conexao.php';
+        $sql = "SELECT * FROM cidades";
+        $buscar = mysqli_query($conexao, $sql);
+
+        while ($dados = mysqli_fetch_array($buscar)){
+            $cidades = $dados['cidade'];
+            $populacao = $dados['populacao'];
+        ?>
+        ['<?php echo $cidades ?>', <?php echo $populacao ?>, <?php echo $populacao ?> ],
+
+        <?php } ?>
     ]);
 
     var option = {
-        title: 'Meu primeiro Gráfico',
+        title: 'População das Cidades',
         curveType: 'function',
         legend: { position: 'right' }
     };
