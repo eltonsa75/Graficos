@@ -7,10 +7,37 @@
 </head>
 <body>
 
-
-
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <select class="form-control">
+                    <option>Janeiro</option>
+                    <option>Fevereiro</option>
+                    <option>Março</option>
+                    <option>Abril</option>
+                    <option>Maio</option>
+                    <option>Junho</option>
+                    <option>Julho</option>
+                    <option>Agosto</option>
+                    <option>Setembro</option>
+                    <option>Outubro</option>
+                    <option>Novembro</option>
+                    <option>Dezembro</option>
+            </select>
+        </div>
+        <div class="form-group">
+        <label>Digite a Quantidade</label>
+            <input type="number" name="quantidade" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>Digite o Valor</label>
+            <input type="number" name="valor" class="form-control">
+        </div>
+        <br/>
+        <div style="text-align: right">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+</div>
+<!--Script Bundle with Popper -->
+<sDezembroc="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
