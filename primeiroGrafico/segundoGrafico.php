@@ -1,6 +1,5 @@
 <html>
 <header>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -34,10 +33,10 @@ function drawChart(){
 
       var options = {
         title: "População das Cidades",
-        width: 600,
+        //width: 600,
         height: 400,
         bar: {groupWidth: "75%"},
-        legend: { position: "none" },
+        legend: { position: "top" },
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("graficoColuna"));
       chart.draw(view, options);
@@ -46,6 +45,6 @@ function drawChart(){
 </script>
 </head>
 <body>
-<div id="graficoColuna" style="width: 900px; height: 500px"></div>
+<div id="graficoColuna" style="height: 500px"></div>
 </body>
 </html>
