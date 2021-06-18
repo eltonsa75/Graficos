@@ -6,16 +6,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
-<body style="background:#000">
+<body style="background-color:#d3d3d3">
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
-        <?php include 'primeiroGrafico.php' ?>
+        <div class="col-md-6">
+        <?php include 'terceiroGrafico.php' ?>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
         <?php include 'segundoGrafico.php' ?>
         </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-12">
+    <?php include 'primeiroGrafico.php' ?>
     </div>
 </div>
   <!-- JavaScript Bundle with Popper -->
