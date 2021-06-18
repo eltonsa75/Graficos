@@ -33,73 +33,29 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
               
-              Dashboard
+              Dashboard <span class="sr-only">(atual)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
+            <a class="nav-link" href="?pagina=pedidos">
               
-              Orders
+              Pedidos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
+            <a class="nav-link" href="?pagina=produtos">
               
-              Products
+              Produtos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
+            <a class="nav-link" href="?pagina=clientes">
               
-              Customers
+              Clientes
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Integrations
-            </a>
-          </li>
+          </li>        
         </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#" aria-label="Add a new report">
-            
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
-              
-              Year-end sale
-            </a>
-          </li>
-        </ul>
       </div>
     </nav>
     <!-- Conteudo -->
@@ -114,9 +70,29 @@
         </div>
       </div>
 
-      
+      <?php 
 
-      <h2>Section title</h2>
+        if(isset($_GET['pagina'])) {
+
+          switch ($_GET['pagina']) {
+            case 'pedidos':
+              echo '<h2>Pedidos</h2>';
+              include 'graficoArea.php';
+            break;
+            case 'produtos':
+              echo '<h2>Produtos</h2>';
+            break;
+            case 'clientes':
+              echo '<h2>Clientes</h2>';
+            break;
+
+            default:
+            echo "NENHUMA OPÇÃO ESCOLHIDA";
+            break;
+          }
+        }
+      
+      ?>
       
     </main>
   </div>
