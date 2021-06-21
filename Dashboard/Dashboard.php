@@ -150,7 +150,7 @@
   </div>
   <div class="d-block d-sm-none">
     <nav class="navbar fixed-bottom navbar-light bg-light">
-      <a class="navbar-brand" href="#">Ricardo</a>
+      <a class="navbar-brand" href="#">WME</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -193,7 +193,6 @@
 
 
       <script type="text/javascript">
-
         $(window).resize(function(){
           drawChart();
           drawChart2();

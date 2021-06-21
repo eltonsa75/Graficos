@@ -40,9 +40,9 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChart2);
 
-      function drawChart() {
+      function drawChart2() {
 
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
@@ -81,7 +81,7 @@
       </div>
       <div class="col-md-4">
      <h4>Quantidade Vendas</h4>
-      <div id="piechart" style="width: 400px"></div>
+      <div id="piechart"></div>
       </div>
       </div>
       </div>
