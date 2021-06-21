@@ -37,7 +37,7 @@
         </div>
         <div class="form-group">
         <label>Digite o Valor</label>
-            <input type="number" name="valor" class="form-control">
+            <input type="numeric" name="valor" class="form-control">
         </div>
         <br/>
         <div style="text-align: right">
