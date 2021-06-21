@@ -8,9 +8,15 @@
 <body>
 
 <div class="container">
-    <form>
+<div style="text-align: right">
+    <a href="#" role="button" class="btn btn-primary btn-sm">Relatórios</a>
+    <a href="#" role="button" class="btn btn-danger btn-sm">Voltar</a>
+</div>
+
+<h2>Cadastro de Vendas</h2>
+    <form action="cadastro_vendas2.php" method="post">
         <div class="form-group">
-            <select class="form-control">
+            <select class="form-control" name="mes">
                     <option>Janeiro</option>
                     <option>Fevereiro</option>
                     <option>Março</option>

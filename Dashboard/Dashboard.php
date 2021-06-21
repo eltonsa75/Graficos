@@ -50,8 +50,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="?pagina=vendas">
-              
-              Clientes
+              Cadastrar Vendas
             </a>
           </li>        
         </ul>
@@ -82,8 +81,7 @@
             case 'produtos':
               echo '<h2>Produtos</h2>';
             break;
-            case 'vendas':
-              echo '<h2>Cadastro de Vendas</h2>';
+            case 'vendas':             
               include 'cadastro_vendas.php';
             break;
 
