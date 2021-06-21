@@ -31,7 +31,7 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/dashboard/#">
+            <a class="nav-link active" href="?pagina">
               
               Dashboard <span class="sr-only">(atual)</span>
             </a>
@@ -86,7 +86,8 @@
             break;
 
             default:
-           include 'painel.php';
+                include 'painel.php';
+                include 'painel2.php';
             break;
           }
         }

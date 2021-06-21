@@ -3,7 +3,7 @@
 <head>
     <title></title>
 </head>
-<body>
+<body style="background-color: #CCC">
 
 <div class="container-fluid">
   <div class="row">
