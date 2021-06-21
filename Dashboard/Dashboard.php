@@ -86,7 +86,7 @@
             break;
 
             default:
-            echo "NENHUMA OPÇÃO ESCOLHIDA";
+           include 'painel.php';
             break;
           }
         }
