@@ -2,13 +2,21 @@
 <html>
 <head>
     <title></title>
+    <style>
+    #sombra{
+      -webkit-boxshadow: 6px 9px 7px rgba(176,176,176,0.75);
+      -moz-box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
+      box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
+    }
+
+    </style>
 </head>
-<body style="background-color: #CCC">
+<body style="background-color: #f3f3f3">
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;" id="sombra">
   <div class="card-header">Total Clientes / Ano</div>
   <div class="card-body">
     <h5 class="card-title" style="text-align: center; font-size:40px">
@@ -26,7 +34,7 @@
 </div>
     </div>
     <div class="col-md-4">
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;" id="sombra">
   <div class="card-header">Faturamento / Ano</div>
   <div class="card-body">
   <h5 class="card-title" style="text-align: center; font-size:40px">
@@ -48,7 +56,7 @@
 </div>
     </div>
     <div class="col-md-4">
-    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;" id="sombra">
   <div class="card-header">Total Vendas / Ano</div>
   <div class="card-body">
   <h5 class="card-title" style="text-align: center; font-size:40px">

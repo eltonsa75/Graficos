@@ -71,17 +71,27 @@
         chart.draw(data, options);
       }
     </script>
+
+    <style>
+    .sombra{
+      -webkit-boxshadow: 6px 9px 7px rgba(176,176,176,0.75);
+      -moz-box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
+      box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
+    }
+
+    </style>
+
   </head>
   <body>
   <div class="container-fluid" style='margin-top: 50px'>
   <div class="row">
   <div class="col-md-8">
   <h4>Gráfico de Clientes</h4>
-    <div id="curve_chart"></div>
+    <div id="curve_chart" class="sombra"></div>
       </div>
       <div class="col-md-4">
      <h4>Quantidade Vendas</h4>
-      <div id="piechart"></div>
+      <div id="piechart" class="sombra"></div>
       </div>
       </div>
       </div>
