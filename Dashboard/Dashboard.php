@@ -35,7 +35,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="container">
+    <div class="container" style="margin-top: -50px">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">        
           <li class="nav-item dropdown">
@@ -55,7 +55,7 @@
     </div>
   </nav>
 
-  <div class="container-fluid" >
+  <div class="container-fluid">
     <div class="row">
       <nav class="col-md-2 d-none d-md-block sidebar" style='background-color:#fff;border-right: 1px solid #f3f3f3'>
         <div class="sidebar-sticky">
