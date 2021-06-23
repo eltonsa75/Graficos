@@ -38,12 +38,12 @@ while ($dados = mysqli_fetch_array($buscar)) {
 </head>
 <body>
 
-<div class="container" style="background-color: #f3f3f3">
-  <canvas id="Linha"></canvas>
+<div class="container" style="background-color: #250352; margin-top: 20px">
+  <canvas style="padding:30px" id="Barra"></canvas>
 </div>
 
 <script type="text/javascript">
-var ctx = document.getElementById('Linha').getContext('2d');
+var ctx = document.getElementById('Barra').getContext('2d');
 var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -52,23 +52,54 @@ var myLineChart = new Chart(ctx, {
         [{
             label: '2018',
             data:[<?php echo $ano_2018 ?>],
-            backgroundColor: 'rgba(255,99,132)',
+            backgroundColor: 'rgba(255,99,132,0.5)',
             borderColor: 'rgba(255,99,132)',
             borderWidth: 3
         },
         {
             label: '2019',
             data:[<?php echo $ano_2019 ?>],
-            backgroundColor: 'rgba(0,255,255)',
+            backgroundColor: 'rgba(0,255,255,0.8)',
             borderColor: 'rgba(0,255,255)',
             borderWidth: 3
         }]
   },
 
   options: { 
-      scales: {scales :{yAxes : [{beginAtZero : false}], xAxes : [{autoskip: true, maxTicketsLimit: 20 }]}},
-      tooltips: {mode: 'index'},
-      legend:{display: true,position: 'top', labels:{fontColor: 'rgb(0,0,0)', fontSize: 16}}
+      legend: {
+          labels: {
+              fontColor: "white",
+              fontSize: 18
+          }
+      },
+      scales: {
+          xAxes: [{
+              display: true,
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Meses',
+                  fontColor: '#ffffff',
+                  fontSize:10
+              },
+              ticks: {
+                  fontColor: "white",
+                  fontSize: 14
+              }
+          }],
+          yAxes: [{
+              display:true,
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Valores',
+                  fontColor: '#ffffff',
+                  fontSize: 10
+              },
+              ticks: {
+                  fontColor: "white",
+                  fontSize: 14
+              }
+          }]
+      }
   }
 });
 </script>
