@@ -38,8 +38,14 @@ while ($dados = mysqli_fetch_array($buscar)) {
 </head>
 <body>
 
+<!-- https://www.colourlovers.com/ -->
+
 <div class="container" style="background-color: #250352; margin-top: 20px">
   <canvas style="padding:30px" id="Barra"></canvas>
+</div>
+<div class="container">
+    <button class="btn" style="background-color: rgba(0,255,255);" onclick="adddata()">Adicionar Valor</button>
+    <button class="btn" style="background-color: rgba(255,99,132);" onclick="removedata()">Remover Valor</button>
 </div>
 
 <script type="text/javascript">
@@ -60,7 +66,7 @@ var myLineChart = new Chart(ctx, {
             {
             label: 'Meta 2019',
             data:[255,160,120,69.45,237.67],
-            borderColor: '#ff69b4',
+            borderColor: '#FFFAFA',
             borderWidth: 3,
             type: 'line'
         },
@@ -68,14 +74,14 @@ var myLineChart = new Chart(ctx, {
             {
             label: '2018',
             data:[<?php echo $ano_2018 ?>],
-            backgroundColor: 'rgba(255,99,132,0.5)',
+            backgroundColor: 'rgba(255,99,132)',
             borderColor: 'rgba(255,99,132)',
             borderWidth: 3
         },
         {
             label: '2019',
             data:[<?php echo $ano_2019 ?>],
-            backgroundColor: 'rgba(0,255,255,0.8)',
+            backgroundColor: 'rgba(0,255,255)',
             borderColor: 'rgba(0,255,255)',
             borderWidth: 3
         }
@@ -120,6 +126,19 @@ var myLineChart = new Chart(ctx, {
       }
   }
 });
+/* Funções em JS */
+
+function adddata(){
+myLineChart.data.datasets[3].data[5] = 622;
+myLineChart.data.labels[5] = "Junho";
+myLineChart.update();
+}
+function removedata(){
+myLineChart.data.labels.splice(5);
+myLineChart.data.datasets[3].data.splice(5);
+myLineChart.update();
+}
+
 </script>
 
 </body>
