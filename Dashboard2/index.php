@@ -49,7 +49,23 @@ var myLineChart = new Chart(ctx, {
   data: {
         labels:[<?php echo $mes ?>],
         datasets:
-        [{
+        [
+            {
+            label: 'Meta 2018',
+            data:[120,300,99,155.70,547.53],
+            borderColor: 'rgba(255,255,0)',
+            borderWidth: 3,
+            type: 'line'
+        },
+            {
+            label: 'Meta 2019',
+            data:[255,160,120,69.45,237.67],
+            borderColor: '#ff69b4',
+            borderWidth: 3,
+            type: 'line'
+        },
+            
+            {
             label: '2018',
             data:[<?php echo $ano_2018 ?>],
             backgroundColor: 'rgba(255,99,132,0.5)',
@@ -62,7 +78,9 @@ var myLineChart = new Chart(ctx, {
             backgroundColor: 'rgba(0,255,255,0.8)',
             borderColor: 'rgba(0,255,255)',
             borderWidth: 3
-        }]
+        }
+
+        ]
   },
 
   options: { 
@@ -79,11 +97,11 @@ var myLineChart = new Chart(ctx, {
                   display: true,
                   labelString: 'Meses',
                   fontColor: '#ffffff',
-                  fontSize:10
+                  fontSize:20
               },
               ticks: {
                   fontColor: "white",
-                  fontSize: 14
+                  fontSize: 20
               }
           }],
           yAxes: [{
@@ -92,11 +110,11 @@ var myLineChart = new Chart(ctx, {
                   display: true,
                   labelString: 'Valores',
                   fontColor: '#ffffff',
-                  fontSize: 10
+                  fontSize: 20
               },
               ticks: {
                   fontColor: "white",
-                  fontSize: 14
+                  fontSize: 20
               }
           }]
       }
