@@ -45,21 +45,21 @@ while ($dados = mysqli_fetch_array($buscar)) {
 <script type="text/javascript">
 var ctx = document.getElementById('Linha').getContext('2d');
 var myLineChart = new Chart(ctx, {
-  type: 'line',
+  type: 'bar',
   data: {
         labels:[<?php echo $mes ?>],
         datasets:
         [{
             label: '2018',
             data:[<?php echo $ano_2018 ?>],
-            backgroundColor: 'transparent',
+            backgroundColor: 'rgba(255,99,132)',
             borderColor: 'rgba(255,99,132)',
             borderWidth: 3
         },
         {
             label: '2019',
             data:[<?php echo $ano_2019 ?>],
-            backgroundColor: 'transparent',
+            backgroundColor: 'rgba(0,255,255)',
             borderColor: 'rgba(0,255,255)',
             borderWidth: 3
         }]
