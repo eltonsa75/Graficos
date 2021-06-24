@@ -174,7 +174,7 @@ myLineChart.update();
 
 function adddata4(){
 myLineChart.data.datasets[0].data[5] = 133.30;
-myLineChart.data.labels[5] = "Junho";
+myLineChart.data.labels[5] = "Junho"; 
 myLineChart.update();
 }
 function removedata4(){
