@@ -44,8 +44,14 @@ while ($dados = mysqli_fetch_array($buscar)) {
   <canvas style="padding:30px" id="Barra"></canvas>
 </div>
 <div class="container">
-    <button class="btn" style="background-color: rgba(0,255,255);" onclick="adddata()">Adicionar Valor</button>
-    <button class="btn" style="background-color: rgba(255,99,132);" onclick="removedata()">Remover Valor</button>
+    <button class="btn btn-sm" style="background-color: rgba(0,255,255);" onclick="adddata()">Data 2019</button>
+    <button class="btn btn-sm" style="background-color: rgba(0,255,255);" onclick="removedata()">Remover Data 2019</button>
+    <button class="btn btn-sm" style="background-color: rgba(255,99,132);" onclick="adddata2()">Data 2018</button>
+    <button class="btn btn-sm" style="background-color: rgba(255,99,132);" onclick="adddata2()">Remover Data 2018</button>
+    <button class="btn btn-sm btn-ligth" onclick="adddata3()">Meta 2019</button>
+    <button class="btn btn-sm btn-ligth" onclick="removedata3()">Remover Meta 2019</button>
+    <button class="btn btn-sm btn-warning" onclick="adddata4()">Meta 2018</button>
+    <button class="btn btn-sm btn-warning" onclick="removedata4()">Remover Meta 2018</button>
 </div>
 
 <script type="text/javascript">
@@ -126,7 +132,7 @@ var myLineChart = new Chart(ctx, {
       }
   }
 });
-/* Funções em JS */
+/// Barra 2019
 
 function adddata(){
 myLineChart.data.datasets[3].data[5] = 622;
@@ -136,6 +142,44 @@ myLineChart.update();
 function removedata(){
 myLineChart.data.labels.splice(5);
 myLineChart.data.datasets[3].data.splice(5);
+myLineChart.update();
+}
+
+// Barra 2018
+function adddata2(){
+myLineChart.data.datasets[2].data[5] = 255.30;
+myLineChart.data.labels[5] = "Junho";
+myLineChart.update();
+}
+function removedata2(){
+myLineChart.data.labels.splice(5);
+myLineChart.data.datasets[2].data.splice(5);
+myLineChart.update();
+}
+
+///////////////////////////////////////////////
+// Meta 2019
+function adddata3(){
+myLineChart.data.datasets[1].data[5] = 421;
+myLineChart.data.labels[5] = "Junho";
+myLineChart.update();
+}
+function removedata3(){
+myLineChart.data.labels.splice(5);
+myLineChart.data.datasets[1].data.splice(5);
+myLineChart.update();
+}
+
+// Meta 2018
+
+function adddata4(){
+myLineChart.data.datasets[0].data[5] = 133.30;
+myLineChart.data.labels[5] = "Junho";
+myLineChart.update();
+}
+function removedata4(){
+myLineChart.data.labels.splice(5);
+myLineChart.data.datasets[0].data.splice(5);
 myLineChart.update();
 }
 
